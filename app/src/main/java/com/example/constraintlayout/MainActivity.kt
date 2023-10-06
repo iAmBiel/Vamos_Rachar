@@ -27,18 +27,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnI
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Initializing components variables
         amountEditText = findViewById(R.id.amountEditText)
         peopleEditText = findViewById(R.id.peopleEditText)
         shareButton = findViewById(R.id.shareButton)
         speakButton = findViewById(R.id.speakButton)
         resultTextView = findViewById(R.id.resultTextView)
 
+        // Adding TextWatchers
         amountEditText.addTextChangedListener(textWatcher)
         peopleEditText.addTextChangedListener(textWatcher)
 
         shareButton.setOnClickListener(this)
         speakButton.setOnClickListener(this)
 
+        // Initializing the tts
         tts = TextToSpeech(this, this)
     }
 
