@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Constraint Layout</string>
+    <string name="app_name">Vamos Rachar?</string>
+    <string name="title_text">VAMOS RACHAR</string>
+    <string name="amount_hint">Valor</string>
+    <string name="people_hint">Número de Pessoas</string>
+    <string name="speak_button_description">Falar Valor</string>
+    <string name="share_button_description">Compartilhar</string>
 </resources>
