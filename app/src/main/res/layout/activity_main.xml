@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="63dp"
-        android:text="Preço:"
+        android:text="@string/preco"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="61dp"
         android:layout_marginTop="15dp"
-        android:text="Quantidade de pessoas:"
+        android:text="@string/qtd_pessoas"
         android:textStyle="bold" />
 
     <EditText
