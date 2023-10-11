@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnI
 
         if (amount != null && people != null && people != 0) {
             val result = amount / people
-            resultTextView.text = "O valor para cada pessoa é R$ %.2f".format(result)
+            updateResultText(result)
         } else {
             resultTextView.text = ""
         }
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnI
             }
             startActivity(Intent.createChooser(sendIntent, "Compartilhar resultado"))
         } else {
-            Toast.makeText(this, "Nenhum valor para compartilhar", Toast.LENGTH_SHORT).show()
+            showLocalizedToast(R.string.toast_mensagem_compartilhar)
         }
     }
 
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnI
         if (resultText.isNotEmpty()) {
             speakOut(resultText)
         } else {
-            Toast.makeText(this, "Nenhum valor para falar", Toast.LENGTH_SHORT).show()
+            showLocalizedToast(R.string.toast_mensagem_falar)
         }
     }
 
@@ -92,9 +92,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnI
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
     }
 
+    private fun updateResultText(result: Double) {
+        val locale = Locale.getDefault()
+        val resultText: String = when (locale.language) {
+            "fr" -> getString(R.string.result_text, result)
+            "es" -> getString(R.string.result_text, result)
+            else -> getString(R.string.result_text, result)
+        }
+        resultTextView.text = resultText
+    }
+
+    private fun showLocalizedToast(messageResId: Int) {
+        val message = getString(messageResId)
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val locale = Locale("pt", "BR")
+            val locale = Locale.getDefault()
             val result = tts.setLanguage(locale)
 
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {

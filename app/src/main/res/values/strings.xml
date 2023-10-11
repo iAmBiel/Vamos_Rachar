@@ -2,5 +2,7 @@
     <string name="app_name">Vamos Rachar?</string>
     <string name="preco">Preço:</string>
     <string name="qtd_pessoas">Quantidade de pessoas:</string>
-    <string name="result_text_pt">O valor para cada pessoa é R$ %.2f</string>
+    <string name="result_text">O valor para cada pessoa é R$ %.2f</string>
+    <string name="toast_mensagem_falar">Nenhum valor para falar</string>
+    <string name="toast_mensagem_compartilhar">Nenhum valor para compartilhar</string>
 </resources>

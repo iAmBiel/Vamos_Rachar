@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dividir El Dinero?</string>
+    <string name="preco">Precio:</string>
+    <string name="qtd_pessoas">Cantidad de personas:</string>
+    <string name="result_text">El valor por persona es de %.2f €</string>
+    <string name="toast_mensagem_falar">No hay valor del que hablar</string>
+    <string name="toast_mensagem_compartilhar">No hay valor para compartir</string>
+</resources>

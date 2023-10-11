@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Partage De Argent ?</string>
+    <string name="preco">Prix:</string>
+    <string name="qtd_pessoas">Nombre de personnes:</string>
+    <string name="result_text">La valeur par personne est de %.2f €</string>
+    <string name="toast_mensagem_falar">Aucune valeur à proprement parler</string>
+    <string name="toast_mensagem_compartilhar">Aucune valeur à partager</string>
+</resources>
